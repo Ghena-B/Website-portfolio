@@ -2,6 +2,7 @@ import {Container, Nav, Navbar} from "react-bootstrap";
 import './styles/style.css'
 import profilephoto from '../assets/images/profilephoto.jpeg'
 import {SocialMediaLinksList} from "./SocialMediaLinksList";
+import {Link} from "react-scroll";
 
 export const Header = () => {
     return (
@@ -19,11 +20,10 @@ export const Header = () => {
             <Navbar.Toggle aria-controls="nav" className="border-0 order-1"/>
             <Navbar.Collapse id="nav" className="order-last">
                 <Nav className="flex-column w-100 justify-content-center">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <Nav.Link href="#aboutme">About me</Nav.Link>
-                    <Nav.Link href="#projects">Projects</Nav.Link>
-                    <Nav.Link href="#contact">Contact</Nav.Link>
+                    <Link to="home" smooth={true} duration={300} className="nav-link">Home</Link>
+                    <Link to="about" smooth={true} duration={300} className="nav-link">About me</Link>
+                    <Link to="projects" smooth={true} duration={300} className="nav-link">Projects</Link>
+                    <Link to="contact" smooth={true} duration={300} className="nav-link">Contact</Link>
                     <SocialMediaLinksList/>
                 </Nav>
 
