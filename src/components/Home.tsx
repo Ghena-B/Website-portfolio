@@ -3,6 +3,7 @@ import GraphemeSplitter from 'grapheme-splitter';
 import Typewriter from 'typewriter-effect';
 import { Button, Container } from 'react-bootstrap';
 import {Link} from "react-scroll";
+import './styles/style.css'
 
 export const Home = () => {
     const stringSplitter = (string: string) => {
@@ -11,7 +12,7 @@ export const Home = () => {
     };
 
     return (
-        <Container id="home" fluid className="d-flex flex-column align-content-center justify-content-center text-center">
+        <Container id="home" fluid className="d-flex flex-column justify-content-md-center align-content-center text-center mt-md-0 mt-5">
             <h1 className="display-1">Hello</h1>
             <h3 className="display-6 mb-6" style={{ minHeight: '8rem' }}><Typewriter
                 options={{

@@ -18,3 +18,9 @@
 .main-content > div {
     min-height: 100vh;
 }
+
+@media (min-width: 768px) {
+    .align-items-md-center {
+        align-items: center !important;
+    }
+}
