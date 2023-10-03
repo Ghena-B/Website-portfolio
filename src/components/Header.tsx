@@ -10,8 +10,7 @@ export const Header = () => {
                 className="flex-md-column flex-row align-items-center py-2 text-center sticky-top" id="sidebar">
             <Container className="text-center p-3">
                 <div className="text-center p-3">
-                    <img src={profilephoto}
-                         alt="profile " className="img-fluid rounded-circle my-4 p-1 d-none d-md-block shadow"/>
+                    <img src={profilephoto} alt="profile" className="img-fluid my-4 p-1 d-none d-md-block  avatar-img"/>
                     <Navbar.Brand href="#" className="mx-0 font-weight-bold text-nowrap ">
                         Ghenadie Bujag
                     </Navbar.Brand>
