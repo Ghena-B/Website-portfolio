@@ -1,5 +1,5 @@
+import {SocialMediaLinksList} from "../SocialMediaLinksList";
 import {ContactForm} from "./ContactForm";
-import {SocialMediaLinksList} from "./SocialMediaLinksList";
 
 export const Contact = () => {
     return (

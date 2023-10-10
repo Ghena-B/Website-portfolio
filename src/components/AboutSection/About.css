@@ -1,0 +1,143 @@
+/* Variables */
+:root {
+    --primary-color: #000;
+    --title-font-size: 7vw;
+    --content-margin-bottom: 15px;
+}
+
+/* General styles */
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Image styles */
+.img-wrapper {
+    max-width: 80%;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Content styles */
+.content-container {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+.content-wrapper {
+    max-width: 67%;
+    position: relative;
+}
+
+.content-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    height: 10px;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.content-wrapper > :last-child {
+    align-self: flex-end;
+    margin-top: 30px;
+}
+
+/* Title styles */
+.about-title {
+    white-space: nowrap;
+    direction: rtl;
+    text-transform: uppercase;
+    font-size: var(--title-font-size);
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: difference;
+    color: white;
+}
+
+/* Text content styles */
+.about-content > :not(:last-child) {
+    margin-bottom: var(--content-margin-bottom);
+}
+
+/* Bold text styles */
+.bold-text {
+    font-weight: bold;
+}
+.button-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 1439px) {
+    .img-wrapper {
+        max-width: 90%;
+    }
+    .content-wrapper {
+        max-width: 80%;
+
+    }
+    .about-title {
+        padding-right: 75px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper {
+        max-width: 90%;
+        font-size: 14px;
+    }
+    .about-title {
+        padding-right: 70px;
+    }
+    .button-container {
+        display: flex;
+    }
+    .content-wrapper > :last-child {
+        display: none;
+    }
+    .content-wrapper::after {
+        height: 6px;
+    }
+}
+
+@media (max-width: 900px) {
+    .img-wrapper {
+        max-width: 95%;
+    }
+    .content-wrapper {
+        max-width: 95%;
+        font-size: 12px;
+    }
+    .content-wrapper::after {
+        bottom: -10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-container {
+        margin-bottom: 80px;
+    }
+    .about-title {
+        padding-right: 0;
+        text-align: center;
+    }
+    .content-container {
+        margin-bottom: 50px;
+    }
+    .content-wrapper::after {
+        width: 40%;
+        bottom: -50px;
+    }
+}

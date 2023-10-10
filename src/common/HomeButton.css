@@ -1,0 +1,44 @@
+/* HomeButton.css */
+.home-button:focus,
+.home-button:active,
+.home-button:hover {
+    outline: none;
+    box-shadow: none;
+}
+
+.home-button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    background: #e8e8e8;
+    position: relative;
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.home-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+}
+
+.home-button:hover {
+    color: #e8e8e8;
+    background-color: #e8e8e8 !important;
+}
+
+.home-button:hover::before {
+    width: 100%;
+}

@@ -1,13 +1,15 @@
 import React, {useLayoutEffect, useRef} from 'react';
-import {Button, Container} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import {Link} from 'react-scroll';
-import './styles/style.css';
-import TypewriterComponent from './HomeSection/TypewriterComponent';
+import '../styles/style.css';
+import './Home.css';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import TypewriterComponent from "./TypewriterComponent";
+import HomeButton from "../../common/HomeButton";
 
 gsap.registerPlugin(ScrollTrigger);
-export const HomeCopy = () => {
+export const Home = () => {
     const component = useRef<HTMLDivElement>(null);
     const slider = useRef<HTMLDivElement>(null);
 
@@ -51,7 +53,6 @@ export const HomeCopy = () => {
         }
     }, [component, slider]);
     return (
-
         <div className="App" ref={component}>
             <div ref={slider} className="containerz" style={{width: '100%'}}>
                 <div className="description panel moving-panel">
@@ -59,58 +60,19 @@ export const HomeCopy = () => {
                         <h1
                             className="font-weight-bold"
                             style={{
-                                fontSize: '16rem',
+                                fontSize: '20vw',
                             }}
                         >
                             hello
                         </h1>
                         <TypewriterComponent/>
                         <div className="d-inline-block mt-4">
-                            <Button variant="primary btn-lg" btn-lg className={"home-button"}>
-                                <Link to="contact" smooth={true} duration={300} className="nav-link">
-                                    Contact me
-                                </Link>
-                            </Button>
+                            <HomeButton/>
                         </div>
                     </div>
                 </div>
                 <div className="opposite-panel"></div>
             </div>
         </div>
-
     );
 };
-
-
-/*
-<Container
-    id="home"
-    fluid
-    className="d-flex flex-column justify-content-md-center align-content-center text-center mt-md-0 mt-5"
-    style={{minHeight: '100vh'}}
-    ref={component}
-
->
-    <div ref={slider} className="container" >
-        <div className="description panel moving-panel" >
-            <h1
-                className="font-weight-bold"
-                style={{
-                    position: 'relative',
-                    fontSize: '10rem',
-                }}
-            >
-                Hello
-            </h1>
-            <TypewriterComponent/>
-            <div className="d-inline-block mt-4">
-                <Button variant="primary">
-                    <Link to="contact" smooth={true} duration={300} className="nav-link">
-                        Contact me
-                    </Link>
-                </Button>
-            </div>
-        </div>
-        <div className="opposite-panel"></div>
-    </div>
-</Container>*/

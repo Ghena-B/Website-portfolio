@@ -1,7 +1,7 @@
 import {Container, Nav, Navbar} from "react-bootstrap";
-import './styles/style.css'
-import profilephoto from '../assets/images/profilephoto.jpeg'
-import {SocialMediaLinksList} from "./SocialMediaLinksList";
+import './Header.css'
+import profilephoto from '../../assets/images/profilephoto.jpeg'
+import {SocialMediaLinksList} from "../SocialMediaLinksList";
 import {Link} from "react-scroll";
 
 export const Header = () => {

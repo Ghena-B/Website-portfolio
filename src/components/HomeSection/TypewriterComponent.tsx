@@ -8,7 +8,7 @@ const TypewriterComponent = React.memo(() => {
         return splitter.splitGraphemes(string);
     };
     return (
-        <h3 className="display-6 mb-6" style={{ minHeight: '8rem' }}><Typewriter
+        <h3 className="display-6 mb-6" style={{ minHeight: '8rem'}}><Typewriter
             options={{
                 strings: [
                     "I'm Ghenadie Bujag 👋",

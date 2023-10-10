@@ -1,4 +1,4 @@
-import projectsData, {ProjectDataType} from "../data/projectsData";
+import projectsData, {ProjectDataType} from "../../data/projectsData";
 
 export const Projects = () => {
     return (
