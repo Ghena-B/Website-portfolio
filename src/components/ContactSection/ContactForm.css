@@ -1,0 +1,72 @@
+ {
+    --primary-color: #010712;
+    --secondary-color: #818386;
+    --bg-color: #FCFDFD;
+    --button-color: #3B3636;
+    --h1-color: #3F444C;
+}
+
+label, .button-form {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+label  {
+    color: #818386;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+}
+form {
+   width: 100%;
+    position: relative;
+}
+
+input, textarea, label {
+    width: inherit;
+    display: block;
+
+}
+
+placeholder, input, textarea {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+input, textarea {
+    color: #010712;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid #818386;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    outline: none;
+}
+textarea {
+    resize: none;
+}
+
+.button-form {
+    text-transform: uppercase;
+    font-weight: 300;
+    background: #212529;
+    color: #FCFDFD;
+    width: 10rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+input:hover, textarea:hover, .button-form:hover {
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+ .button-form:active {
+    opacity: 0.8;
+}
+input:focus, textarea:focus {
+    outline: 1px solid #010712;
+    border: 0;
+}

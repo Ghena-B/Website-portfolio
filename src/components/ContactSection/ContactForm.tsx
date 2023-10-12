@@ -1,6 +1,6 @@
 import {useForm} from "react-hook-form";
 import emailjs from '@emailjs/browser';
-
+import './ContactForm.css'
 const userID = process.env.REACT_APP_EMAILJS_USER_ID
 const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
 const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID
@@ -18,12 +18,15 @@ export const ContactForm = () => {
     };
     console.log(errors);
     return (
-        <form onSubmit={handleSubmit(onSubmit)} style={{display: "flex", flexDirection: 'column'}}>
+        <form onSubmit={handleSubmit(onSubmit)} >
+            <label htmlFor="name">Full name</label>
             <input type="text" placeholder="Name" {...register("name", {required: true, maxLength: 80})} />
+            <label htmlFor="email">Email Address</label>
             <input type="email" placeholder="Email" {...register("email", {required: true})} />
+            <label htmlFor="message">Message</label>
             <textarea {...register("message")} placeholder="Type your message here"/>
 
-            <input type="submit" />
+            <button type={"submit"} className={"button-form"}>Send</button>
         </form>
     )
 }
