@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/Website-portfolio/static/css/main.e46193cc.css",
-    "main.js": "/Website-portfolio/static/js/main.b2d30ac2.js",
+    "main.css": "/Website-portfolio/static/css/main.fc1f42aa.css",
+    "main.js": "/Website-portfolio/static/js/main.bb72baa3.js",
     "static/js/787.1a5e7cc7.chunk.js": "/Website-portfolio/static/js/787.1a5e7cc7.chunk.js",
     "static/media/20230602_1728031.jpg": "/Website-portfolio/static/media/20230602_1728031.c2572c49c001af60416e.jpg",
-    "static/media/Screenshot 2023-10-02 172619.png": "/Website-portfolio/static/media/Screenshot 2023-10-02 172619.6cae6c08483431524d8a.png",
-    "static/media/Screenshot 2023-10-02 172846.png": "/Website-portfolio/static/media/Screenshot 2023-10-02 172846.76f887b221cd3537cf94.png",
-    "static/media/Screenshot 2023-10-02 172118.png": "/Website-portfolio/static/media/Screenshot 2023-10-02 172118.3deae4e2d6047a0e3329.png",
-    "static/media/Screenshot 2023-10-02 172432.png": "/Website-portfolio/static/media/Screenshot 2023-10-02 172432.174bdcea0a04f4caf46a.png",
+    "static/media/Screenshot 2023-10-02 172846.png": "/Website-portfolio/static/media/Screenshot 2023-10-02 172846.8d1a473592f0bafa393c.png",
+    "static/media/Screenshot 2023-10-02 172118.png": "/Website-portfolio/static/media/Screenshot 2023-10-02 172118.0671a4d49290294d1186.png",
+    "static/media/Screenshot 2023-10-02 172432.png": "/Website-portfolio/static/media/Screenshot 2023-10-02 172432.bd1521cd97d73c405ea1.png",
     "static/media/profilephoto.jpeg": "/Website-portfolio/static/media/profilephoto.56077b28d04b1d75adc7.jpeg",
     "static/media/bootstrap-icons.woff?": "/Website-portfolio/static/media/bootstrap-icons.449ad8adf6ae0424b7ed.woff",
     "static/media/bootstrap-icons.woff2?": "/Website-portfolio/static/media/bootstrap-icons.dea24bf5a7646d8b84e7.woff2",
     "index.html": "/Website-portfolio/index.html",
-    "main.e46193cc.css.map": "/Website-portfolio/static/css/main.e46193cc.css.map",
-    "main.b2d30ac2.js.map": "/Website-portfolio/static/js/main.b2d30ac2.js.map",
+    "main.fc1f42aa.css.map": "/Website-portfolio/static/css/main.fc1f42aa.css.map",
+    "main.bb72baa3.js.map": "/Website-portfolio/static/js/main.bb72baa3.js.map",
     "787.1a5e7cc7.chunk.js.map": "/Website-portfolio/static/js/787.1a5e7cc7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e46193cc.css",
-    "static/js/main.b2d30ac2.js"
+    "static/css/main.fc1f42aa.css",
+    "static/js/main.bb72baa3.js"
   ]
 }
