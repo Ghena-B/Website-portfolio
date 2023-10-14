@@ -1,19 +1,19 @@
 /* Default (Original) Theme */
 button.learn-more.original {
-    --circle-bg: #fff;
-    --icon-bg: #282936;
-    --text-color: #fff;
-    --hover-icon-bg: #282936;
-    --hover-text-color: #282936;
+    --circle-bg: var(--light-color);
+    --icon-bg: var(--dark-color);
+    --text-color: var(--light-color);
+    --hover-icon-bg: var(--dark-color);
+    --hover-text-color: var(--dark-color);
 }
 
 /* Reversed Theme */
 button.learn-more.reversed {
-    --circle-bg: #282936;
-    --icon-bg: #fff;
-    --text-color: #282936;
-    --hover-icon-bg: #fff;
-    --hover-text-color: #fff;
+    --circle-bg: var(--dark-color);
+    --icon-bg: var(--light-color);
+    --text-color:var(--dark-color);
+    --hover-icon-bg: var(--light-color);
+    --hover-text-color: var(--light-color);
 }
 
 /* General button styles */
@@ -32,7 +32,7 @@ button {
 }
 
 button.learn-more {
-    width: 12rem;
+    width: 13rem;
     height: auto;
 }
 

@@ -7,11 +7,14 @@
 }
 
 .contact-title {
-    margin: 70px 0;
     width: 100%;
-    text-align: center;
     position: relative;
-    /* Add your styling for the title, like font-size, color, etc. */
+}
+.contact-title h4{
+    font-size: 14vw;
+    text-transform: uppercase;
+    line-height: 0.9;
+    white-space: nowrap;
 }
 
 .contact-title::before {
@@ -20,27 +23,26 @@
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    height: 1px; /* Adjust the thickness of the line */
-    width: 90%; /* Adjust the width of the line */
+    height: 2px;
+    width: 100%;
     background-color: #cbcbcc;
     z-index: 2;
 }
-.contact-title h4 {
-    font-size: 15.5vw;
-    text-transform: uppercase;
-    font-weight: 400;
-    line-height: 0.8;
-    letter-spacing: -5px;
+.contact-subtitle1 {
+    line-height: 1;
+    font-size: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-left: 8.5%;
 }
-.contact-subtitle {
+.contact-subtitle2 {
     text-transform: uppercase;
-    font-weight: 600;
-
-    font-size: 1.4vw;
+    font-weight: 500;
+    font-size: 1.6vw;
     line-height: 0.9;
+    max-width: 250px;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 .contact-container {
-    margin-top: 50px;
     width: 100%;
 }
 
@@ -48,5 +50,16 @@
 }
 
 .alternate-color {
-    color: black;  /* Set the color you want for the alternate icons */
+    color: var(--dark-color);
+}
+
+.contact-col2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 7%;
+    width: 6%;
+    height: 10px;
+    background-color: var(--dark-color);
+    z-index: 1;
 }

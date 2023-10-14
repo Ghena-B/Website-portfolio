@@ -1,42 +1,225 @@
-/*BannerLayout*/
+.banner-card {
+    position: relative;
+    overflow: hidden;
+    max-height: 500px;
+}
+
 .img-container {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
-    max-height: 500px;
-    overflow: hidden;
 }
 
 .banner-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     object-position: top;
-    filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
 .overlay {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
     z-index: 1;
 }
 
-.card-img-overlay {
+.banner-card:hover .banner-img {
+    transform: scale(1.1);
+}
+
+.content-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    z-index: 5;
+    border: 0.5px solid #b6b6b6;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* reverted */
+    height: 100%; /* reverted */
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(30px);
+    z-index: 3;
+    border-radius: 9px;
+}
+
+.content-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    color: white;
+    padding: 20px;
+    border-radius: 9px;
+    background: transparent;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: absolute;
-    bottom: 0;
-
-    z-index: 2;
-    padding: 20px;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
 
 /*FullLayout*/
+.overlay-full-layout {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    height: 100%;
+    width: calc(100% - 24px);
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(30px);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-container-full-layout:hover .overlay-full-layout {
+    opacity: 1;
+}
+
+.hover-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-container-full-layout:hover .hover-content {
+    opacity: 1;
+}
+
+.image-container-full-layout {
+    max-height: 350px;
+    overflow: hidden;
+}
+
+/* HalfLayout */
+
+.half-card {
+    position: relative;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.overlay-half-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(30px);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.img-container:hover .overlay-half-layout {
+    opacity: 1;
+}
+
+.img-container:hover .hover-content {
+    opacity: 1;
+}
+
+.projects-button {
+    position: relative;
+    z-index: 10;
+}
+
+/*-----CARDS--------------------*/
+.card-title {
+    text-transform: uppercase;
+}
+.card-body {
+    position: relative;
+}
+
+.technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.technologies-list li {
+    list-style: none;
+}
+
+.mb-auto {
+    margin-bottom: auto !important;
+}
+
+
+.card {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+
+.full-card::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 100%;
+    background-color: #cbcbcc;
+    z-index: 2;
+}
+.row {
+    position: relative;
+
+}
+.row-line::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 98%;
+    background-color: #cbcbcc;
+    z-index: 2;
+}
+
+.projects-title {
+    width: inherit;
+}
+.projects-title h4{
+    width: 100%;
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+
+
+
+
+

@@ -6,9 +6,11 @@ import {Link} from "react-scroll";
 
 export const Header = () => {
     return (
-        <Navbar  variant="dark" expand="md"
-                className="flex-md-column flex-row align-items-center py-2 text-center sticky-top" style={{zIndex: 1000, position: "fixed", width: "inherit"}} id="sidebar" >
-            <Container className="text-center p-3" >
+        <Navbar variant="dark" expand="md"
+                className="custom-navbar flex-md-column flex-row align-items-center py-2 text-center sticky-top"
+                style={{zIndex: 1000, position: "fixed", width: "inherit"}}
+                id="sidebar" >
+        <Container className="text-center p-3" >
                 <div className="text-center p-3">
                     <img src={profilephoto} alt="profile" className="img-fluid my-4 p-1 d-none d-md-block  avatar-img"/>
                     <Navbar.Brand href="#" className="mx-0 font-weight-bold text-nowrap ">

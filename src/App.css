@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;600&display=swap');
 
+/* Variables */
+:root {
+  --dark-color: #191a1c;
+  --light-color: #e8e8e8;
+  --title-font-size: 7vw;
+  --content-margin-bottom: 15px;
+}
 
 
 .App {

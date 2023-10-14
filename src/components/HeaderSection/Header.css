@@ -43,3 +43,7 @@
     color: #93afce;
 
 }
+
+.custom-navbar {
+    background-color: var(--dark-color)!important;
+}

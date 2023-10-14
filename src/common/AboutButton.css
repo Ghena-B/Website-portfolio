@@ -1,20 +1,19 @@
 /* AboutButton.css */
 .about-button {
     width: 150px;
-    height: 50px;
-    background: #e8e8e8;
+    height: 60px;
+    background: var(--light-color);
     position: relative;
     text-align: center;
     border-radius: 5px;
     overflow: hidden;
     padding: 15px 25px;
     border: none;
-    color: #212121;
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    color: var(--dark-color);
     transition: all 250ms;
     cursor: pointer;
     margin: 0 auto;
-    font-weight: 600;
+    font-size: 20px;
 }
 
 .about-button::before {
@@ -22,9 +21,8 @@
     position: absolute;
     width: 90px;
     height: 35px;
-    background-color: #fff;
-    font-size: 0.9rem;
-    color: #111;
+    background-color: var(--light-color);
+    color: var(--dark-color);
     border-radius: .25em;
     line-height: 35px;
     bottom: 75px;
@@ -40,7 +38,7 @@
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-top-color: #fff;
+    border-top-color: var(--light-color);
     left: 65px;
     bottom: 65px;
     opacity: 0;
@@ -71,8 +69,8 @@
 }
 
 .about-button:hover {
-    color: #e8e8e8;
-    background-color: #212121;
+    color: var(--light-color);
+    background-color: var(--dark-color);
 }
 
 .about-button:hover .text {
@@ -106,8 +104,8 @@
 
 .about-button:active,
 .about-button:focus {
-    color: #e8e8e8;
-    background-color: #212121;
+    color: var(--light-color);
+    background-color: var(--dark-color);
     transition-delay: 0.5s;
 }
 

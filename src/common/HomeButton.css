@@ -10,8 +10,8 @@
     padding: 15px 25px;
     border: unset;
     border-radius: 15px;
-    color: #212121;
-    background: #e8e8e8;
+    color: var(--dark-color);
+    background: var(--light-color);
     position: relative;
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     transition: all 250ms;
@@ -35,8 +35,8 @@
 }
 
 .home-button:hover {
-    color: #e8e8e8;
-    background-color: #e8e8e8 !important;
+    color: var(--light-color);
+    background-color: var(--light-color)!important;
 }
 
 .home-button:hover::before {

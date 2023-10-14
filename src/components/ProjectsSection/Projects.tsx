@@ -11,39 +11,53 @@ const ProjectCard: React.FC<ProjectProps> = (props) => {
     return <Layout {...props} />;
 }
 
-const BannerLayout: React.FC<ProjectProps> = ({id, title, description, technologies, imageUrl, link}) => {
+const BannerLayout: React.FC<ProjectProps> = ({id, title, description, technologies, imageUrl}) => {
     return (
         <div className="card banner-card mb-5">
             <div className="img-container">
-                <img src={imageUrl} className="card-img banner-img" alt={`${title} banner`}/>
+                <img src={imageUrl} alt={`${title} banner`} className="card-img banner-img"/>
                 <div className="overlay"></div>
             </div>
-            <div className="card-img-overlay text-white">
-                <h5 className="card-title">{title}</h5>
-                <p className="card-text">{description}</p>
-                <ProjectsButton theme="original" />
+            <div className="content-overlay">
+                <div className="blur-overlay"></div>
+                <div className="content-inner text-white">
+                    <h5 className="card-title fs-3">{title}</h5>
+                    <p className="card-text">{description}</p>
+                    <ul className="technologies-list mb-auto lead">
+                        {technologies.map((tech, index) => (
+                            <li key={`${id}-${index}`}>{tech}</li>
+                        ))}
+                    </ul>
+                    <ProjectsButton theme="original" buttonText="View Live"
+                                    url="https://ghena-b.github.io/Social-media-upd"/>
+                </div>
             </div>
         </div>
     );
 };
+
+
 const FullLayout: React.FC<ProjectProps> = ({id, title, description, technologies, imageUrl, link}) => {
     return (
         <div className="card full-card mb-5">
-            <div className="row g-0">
+            <div className="row ">
                 <div className="col-md-6 d-flex">
-                    <div className="card-body ">
-                        <h5 className="card-title">{title}</h5>
-                        <p className="card-text">{description}</p>
-                        <ul className="technologies-list">
-                            {technologies.map((tech, index) => (
-                                <li key={id + '-' + index}>{tech}</li>
-                            ))}
-                        </ul>
-                        <ProjectsButton theme="reversed" />
+                    <div className="card-body d-flex flex-column justify-content-between">
+                        <h5 className="card-title fs-3">{title}</h5>
+                        <ProjectsButton theme="reversed" url={"https://github.com/Ghena-B/Website-portfolio"}/>
                     </div>
                 </div>
-                <div className="col-md-6" >
-                    <img src={imageUrl} className="img-fluid" alt={`${title} screenshot`} />
+                <div className="col-md-6 position-relative image-container-full-layout">
+                    <img src={imageUrl} className="img-fluid custom-img" alt={`${title} screenshot`}/>
+                    <div className="overlay-full-layout"></div>
+                    <div className="hover-content">
+                        <p className="card-text text-white">{description}</p>
+                        <ul className="technologies-list mb-auto lead text-white">
+                            {technologies.map((tech, index) => (
+                                <li className={"border rounded p-1"} key={id + '-' + index}>{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,21 +68,27 @@ const HalfLayout: React.FC<ProjectProps> = ({id, title, description, technologie
     return (
         <div className="col-md-6">
             <div className="card half-card">
-                <img src={imageUrl} className="card-img-top" alt={`${title} screenshot`}/>
+                <div className="img-container">
+                    <img src={imageUrl} className="card-img-top custom-img" alt={`${title} screenshot`}/>
+                    <div className="overlay-half-layout"></div>
+                    <div className="hover-content">
+                        <p className="card-text text-white">{description}</p>
+                        <ul className="technologies-list mb-auto lead text-white">
+                            {technologies.map((tech, index) => (
+                                <li className={"border rounded p-1"} key={id + '-' + index}>{tech}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
                 <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
-                    <p className="card-text">{description}</p>
-                    <ul className="technologies-list">
-                        {technologies.map((tech, index) => (
-                            <li key={id + '-' + index}>{tech}</li>
-                        ))}
-                    </ul>
-                    <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
+                    <h5 className="card-title fs-3 pb-5">{title}</h5>
+                    <div className={"projects-button"}><ProjectsButton theme="reversed" url={"https://github.com/Ghena-B/Residential-website"}/></div>
                 </div>
             </div>
         </div>
     );
 };
+
 
 const layouts = {
     full: FullLayout,
@@ -79,13 +99,13 @@ const layouts = {
 export const Projects = () => {
     return (
         <div className={"contact-wrapper container-fluid"} id="projects">
-            <div className={"contact-title"}><h4>Projects</h4></div>
+            <div className={"projects-title mb-5"}><h4>Projects</h4></div>
             {projectsData.map((project, index) => {
                 const layoutType = getLayoutType(project.id);
 
                 if (layoutType === 'half' && index % 2 === 0) {
                     return (
-                        <div className="row" key={project.id}>
+                        <div className="row row-line mb-5" key={project.id}>
                             <HalfLayout layoutType={"full"} {...projectsData[index]} />
                             {projectsData[index + 1] && <HalfLayout layoutType={"full"} {...projectsData[index + 1]} />}
                         </div>
@@ -117,3 +137,5 @@ function getLayoutType(id: number): 'full' | 'half' | 'banner' {
             return 'half';
     }
 }
+
+

@@ -12,7 +12,7 @@ function App() {
     return (
         <Container fluid className="p-o">
             <Row className="min-vh-100 flex-column flex-md-row m-o p-o">
-                <Col xs={12} md={3} xl={2} className="p-0 bg-dark" style={{zIndex: 1000, position: "sticky"}}><Header/></Col>
+                <Col xs={12} md={3} xl={2} className="p-0 custom-navbar" style={{zIndex: 1000, position: "sticky"}}><Header/></Col>
                 <Col xs={12} md={9} xl={10} className="p-o">
                     <Home/>
                     <About/>
