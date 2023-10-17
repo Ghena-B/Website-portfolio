@@ -1,7 +1,7 @@
 import image1 from "./../assets/images/Screenshot 2023-10-02 172432.png"
-import image2 from "./../assets/images/Screenshot 2023-10-02 172118.png"
-import image3 from "./../assets/images/Screenshot 2023-10-02 172619.png"
-import image4 from "./../assets/images/Screenshot 2023-10-02 172846.png"
+import image2 from "./../assets/images/Screenshot 2023-10-17 180848.png"
+import image3 from "./../assets/images/Screenshot 2023-10-02 172118.jpg"
+import image4 from "./../assets/images/Screenshot 2023-10-02 172846.jpg"
 export type ProjectDataType = {
     id: number
     title: string
@@ -24,9 +24,9 @@ const projectsData: ProjectsDataType = [
     {
         id: 2,
         title: "Website Portfolio",
-        description: "Interactive User Experience, Responsive Design, Dynamic Content Rendering, Custom Styling",
+        description: "Interactive User Experience, Responsive Design, Dynamic Content Rendering",
         technologies: ["React", "TypeScript","Boostrap", "CSS", "GSAP"],
-        imageUrl: image1,
+        imageUrl: image2,
         link: ""
     },
     {
@@ -34,7 +34,7 @@ const projectsData: ProjectsDataType = [
         title: "Responsive Landing Page",
         description: "Mobile-First Design, Clean & Intuitive Layout, Cross-Browser Compatibility, SEO Friendly",
         technologies: ["HTML", "CSS"],
-        imageUrl: image2,
+        imageUrl: image3,
         link: ""
     },
     {
@@ -45,7 +45,6 @@ const projectsData: ProjectsDataType = [
         imageUrl: image4,
         link: ""
     },
-
 ];
 
 export default projectsData;

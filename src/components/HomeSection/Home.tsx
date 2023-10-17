@@ -1,6 +1,4 @@
 import React, {useLayoutEffect, useRef} from 'react';
-import {Button} from 'react-bootstrap';
-import {Link} from 'react-scroll';
 import '../styles/style.css';
 import './Home.css';
 import gsap from "gsap";
@@ -53,25 +51,30 @@ export const Home = () => {
         }
     }, [component, slider]);
     return (
-        <div className="App" ref={component}>
-            <div ref={slider} className="containerz" style={{width: '100%'}}>
-                <div className="description panel moving-panel">
-                    <div className="panel-content">
-                        <h1
-                            className="font-weight-bold"
-                            style={{
-                                fontSize: '20vw',
-                            }}
-                        >
-                            hello
-                        </h1>
-                        <TypewriterComponent/>
-                        <div className="d-inline-block mt-4">
-                            <HomeButton/>
+        <div>
+            <div id="home"
+                 style={{position: 'absolute', height: '1px', width: '1px', opacity: 0}}></div>
+            <div className="App"
+                 ref={component}>
+                <div ref={slider}
+                     className="containerz"
+                     style={{width: '100%'}}>
+                    <div className="description panel moving-panel">
+                        <div className="panel-content">
+                            <h1
+                                className="font-weight-bold"
+                                style={{
+                                    fontSize: '20vw',
+                                }}>hello
+                            </h1>
+                            <TypewriterComponent/>
+                            <div className="d-inline-block mt-4">
+                                <HomeButton/>
+                            </div>
                         </div>
                     </div>
+                    <div className="opposite-panel"></div>
                 </div>
-                <div className="opposite-panel"></div>
             </div>
         </div>
     );

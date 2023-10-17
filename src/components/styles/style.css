@@ -1,9 +1,4 @@
 
-
-.main-content > div {
-    min-height: 100vh;
-}
-
 @media (min-width: 768px) {
     .align-items-md-center {
         align-items: center !important;
@@ -21,7 +16,6 @@
     position: relative;
 }
 
-
 html {
     overflow-y: scroll;
     height: 100%;
@@ -35,7 +29,6 @@ body {
     overflow-x: hidden;
     margin: 0;
 }
-
 
 .m-o {
     margin: 0 !important;

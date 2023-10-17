@@ -13,7 +13,7 @@
     color: var(--dark-color);
     background: var(--light-color);
     position: relative;
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 250ms;
     overflow: hidden;
     z-index: 10;
@@ -30,13 +30,13 @@
     border-radius: 15px;
     background-color: #212121;
     z-index: -1;
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 250ms;
 }
 
 .home-button:hover {
     color: var(--light-color);
-    background-color: var(--light-color)!important;
+    background-color: var(--light-color) !important;
 }
 
 .home-button:hover::before {

@@ -55,11 +55,13 @@ input:hover, textarea:hover {
     opacity: 0.5;
     transition: 0.3s ease-in-out;
 }
+
 .button-form:hover {
     transition: 0.3s ease-in-out;
     color: var(--dark-color);
     background-color: var(--light-color);
 }
+
 .button-form:active {
     opacity: 0.8;
 }

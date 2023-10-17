@@ -30,6 +30,17 @@
     position: relative;
 }
 
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Adjust as needed */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .content-wrapper::after {
     content: "";
     position: absolute;
@@ -39,6 +50,11 @@
     height: 10px;
     background-color: var(--dark-color);
     z-index: 1;
+    opacity: 0;
+    transition: opacity 2s, transform 2s;
+}
+.content-wrapper.animate::after {
+    animation: fadeRight 2s forwards;
 }
 
 .content-wrapper > :last-child {
@@ -120,8 +136,11 @@
 }
 
 @media (max-width: 767px) {
+    .about-title {
+        font-size: 16vw;
+    }
     .about-container {
-        margin-bottom: 80px;
+        margin-bottom: 40px;
     }
     .about-title {
         padding-right: 0;
@@ -132,6 +151,6 @@
     }
     .content-wrapper::after {
         width: 40%;
-        bottom: -50px;
+        bottom: -30px;
     }
 }

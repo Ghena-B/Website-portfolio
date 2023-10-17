@@ -116,3 +116,7 @@ button:hover .circle .icon.arrow {
 button:hover .button-text {
     color: var(--hover-text-color);
 }
+
+a.project-button {
+    width: 180px;
+}

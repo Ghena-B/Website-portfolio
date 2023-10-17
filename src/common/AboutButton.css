@@ -90,6 +90,7 @@
 .about-button:hover::after {
     bottom: 65px;
 }
+
 .about-button:active .text,
 .about-button:focus .text {
     top: -100%;
@@ -117,6 +118,7 @@
     visibility: visible;
     transition-delay: 0.5s;
 }
+
 @media (max-width: 767px) {
     .about-button {
         width: 300px;

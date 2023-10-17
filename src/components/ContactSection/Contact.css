@@ -32,14 +32,16 @@
     line-height: 1;
     font-size: 16px;
     font-family: 'Barlow Condensed', sans-serif;
-    margin-left: 8.5%;
+    padding-left: 9.2%;
+    font-weight: 300;
 }
-.contact-subtitle2 {
+
+.contact-subtitle2 p{
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.6vw;
+    font-size: 30px;
     line-height: 0.9;
-    max-width: 250px;
+    max-width: 220px;
     font-family: 'Barlow Condensed', sans-serif;
 }
 .contact-container {
@@ -57,9 +59,60 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: 7%;
-    width: 6%;
+    right: 12%;
+    width: 15%;
     height: 10px;
     background-color: var(--dark-color);
     z-index: 1;
+}
+
+@media (max-width: 1199px) {
+    .contact-subtitle1 {
+        padding-left: 4.5%;
+        font-size: 14px;
+    }
+    .contact-col2::after {
+        right: 1%;
+        width: 10%;
+        height: 6px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-title h4{
+        font-size: 16vw;
+    }
+    .contact-title::before {
+        top: -10px;
+    }
+    .contact-subtitle1 {
+        padding-left: 0;
+        font-size: 14px;
+    }
+    .contact-subtitle2 p{
+        font-size: 25px;
+        direction: rtl;
+    }
+    .contact-col2::after {
+        right: 0;
+        width: 10%;
+        height: 6px;
+    }
+    .contact-container {
+        margin-top: 80px!important;
+    }
+}
+
+@media (max-width: 425px) {
+    .contact-title h4{
+        font-size: 18vw;
+    }
+    .contact-subtitle2 p{
+        font-size: 20px;
+    }
+    .contact-col2::after {
+        right: 0;
+        width: 20%;
+        height: 6px;
+    }
 }
