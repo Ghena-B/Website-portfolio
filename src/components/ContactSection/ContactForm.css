@@ -83,3 +83,8 @@ input:focus, textarea:focus {
     height: auto;
 }
 
+.button-form:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
