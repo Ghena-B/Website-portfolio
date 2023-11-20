@@ -4,7 +4,7 @@ import './styles/style.css';
 import React from "react";
 
 type PropsType = {
-    alternateColor?: boolean
+    alternateColor?: boolean;
 }
 
 export const SocialMediaLinksList: React.FC<PropsType> = ({alternateColor}) => {

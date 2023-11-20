@@ -13,13 +13,17 @@ const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID ?? '';
 export const ContactForm = () => {
     const { register, handleSubmit } = useForm();
     const [submissionStatus, setSubmissionStatus] = useState<null | 'success' | 'error'>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const onSubmit = (data: Record<string, unknown>) => {
+        setIsSubmitting(true);
         emailjs.send(serviceID, templateID, data, userID)
             .then(() => {
                 setSubmissionStatus('success');
+                setIsSubmitting(false);
             }, () => {
                 setSubmissionStatus('error');
+                setIsSubmitting(false);
             });
     };
 
@@ -39,7 +43,8 @@ export const ContactForm = () => {
                           placeholder="Type your message here"/>
                 <div className="d-flex align-items-center justify-content-start gap-2">
                     <button type="submit"
-                            className="button-form hover-enlarge">Send
+                            className="button-form hover-enlarge"
+                            disabled={isSubmitting}>Send
                     </button>
                     {submissionStatus === 'success' &&
                         <div className="lottie-container">
