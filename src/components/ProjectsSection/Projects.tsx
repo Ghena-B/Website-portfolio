@@ -60,6 +60,7 @@ export const Projects = () => {
 function getLayoutType(id: number): 'full' | 'half' | 'banner' {
     switch (id) {
         case 1:
+        case 5:
             return 'banner';
         case 2:
             return 'full';

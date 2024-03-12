@@ -45,21 +45,22 @@ export const About = () => {
                             About me
                         </h2>
                         <div className={"about-content"}>
-                            <div>I'm <span className="bold-text">GHENADIE BUJAG</span>, a passionate Frontend Developer.
+                            <div>I'm <span className="bold-text">GHENADIE BUJAG</span>, a mid-level Front-End Developer
+                                with a passion for <span className="bold-text">crafting interactive and user-friendly
+                                    web experiences.
+                            </span>
                             </div>
                             <div>
-                                I have integrated my strong analytical and problem-solving skills, honed through a
-                                diverse
-                                educational background, into my passion for web development. Specializing in
-                                technologies
-                                like React, Redux, and TypeScript, I focus on creating functional, user-centric
-                                applications. My social network platform exemplifies my dedication to quality,
-                                scalability,
-                                and maintainability in web solutions. Beyond coding, my interests include photography,
-                                playing the guitar, and exploring new places.
+                                I bridge the gap between design and development, translating complex visuals into highly
+                                interactive and responsive interfaces. Throughout the development process, I prioritize
+                                clean, well-structured code that adheres to best practices.
                             </div>
-                            <div>I am keen to contribute to innovative projects and am open to new opportunities in web
-                                development.
+                            <div>Beyond technical expertise, I value collaboration. I thrive in team environments,
+                                effectively communicating with designers and back-end developers to bring projects to
+                                life.
+                            </div>
+                            <div>Take a look around my portfolio to explore my projects and get a sense of my
+                            development style. I'm always eager to learn and contribute to new and exciting challenges :)
                             </div>
                         </div>
                         <AboutButton/>

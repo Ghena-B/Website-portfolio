@@ -1,7 +1,7 @@
 import ProjectsButton from "../../../common/ProjectsButton";
 import {ProjectProps} from "../Projects";
 
-export const BannerLayout: React.FC<ProjectProps> = ({id, title, description, technologies, imageUrl}) => {
+export const BannerLayout: React.FC<ProjectProps> = ({id, title, description, technologies, imageUrl, link}) => {
     return (
         <div className="card banner-card mb-5" data-aos="flip-up">
             <div className="img-container">
@@ -19,7 +19,7 @@ export const BannerLayout: React.FC<ProjectProps> = ({id, title, description, te
                         ))}
                     </ul>
                     <ProjectsButton theme="original" buttonText="View Live"
-                                    url="https://ghena-b.github.io/Social-media-upd"/>
+                                    url={link}/>
                 </div>
             </div>
         </div>
