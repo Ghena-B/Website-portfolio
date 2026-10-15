@@ -12,7 +12,7 @@ const TypewriterComponent = React.memo(() => {
             options={{
                 strings: [
                     "I'm Ghenadie Bujag 👋",
-                    "A Passionate Frontend Developer Crafting Seamless User Experiences 💻",
+                    "A Senior Frontend Developer Crafting Seamless User Experiences 💻",
                     "Let's Connect! Reach Out via LinkedIn or Email 💌",
                     "Turning Ideas into Beautifully Coded Realities 🚀"
                 ],

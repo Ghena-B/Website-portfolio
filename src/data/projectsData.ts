@@ -3,6 +3,7 @@ import image2 from "./../assets/images/Screenshot 2023-10-17 180848.png"
 import image3 from "./../assets/images/Screenshot 2023-10-02 172118.jpg"
 import image4 from "./../assets/images/Screenshot 2023-10-02 172846.jpg"
 import image5 from "./../assets/images/Screenshot 2024-03-12 202116.png"
+import image6 from "./../assets/images/assay-atelier.jpg"
 export type ProjectDataType = {
     id: number
     title: string
@@ -14,6 +15,14 @@ export type ProjectDataType = {
 export type ProjectsDataType = ProjectDataType[];
 
 const projectsData: ProjectsDataType = [
+    {
+        id: 6,
+        title: "Assay Atelier",
+        description: "Pre-launch website for a UK brand making clear, wearable capsules for the gold bars people already own. Features an interactive \"Will yours fit?\" checker that matches gold brands, bar formats and watch models to compatible pieces, founders-list sign-ups, an education hub, light/dark themes and GDPR cookie consent.",
+        technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+        imageUrl: image6,
+        link: "https://assayatelier.com"
+    },
     {
         id: 1,
         title: "Production-Ready React Project with Advanced Features",

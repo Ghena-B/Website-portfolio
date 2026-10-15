@@ -45,7 +45,7 @@ export const About = () => {
                             About me
                         </h2>
                         <div className={"about-content"}>
-                            <div>I'm <span className="bold-text">GHENADIE BUJAG</span>, a mid-level Front-End Developer
+                            <div>I'm <span className="bold-text">GHENADIE BUJAG</span>, a Senior Front-End Developer
                                 with a passion for <span className="bold-text">crafting interactive and user-friendly
                                     web experiences.
                             </span>

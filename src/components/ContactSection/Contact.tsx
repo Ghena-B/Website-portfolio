@@ -15,7 +15,7 @@ export const Contact = () => {
                 <Row className={'d-flex'}>
                     <Col md={6}
                          className={'contact-subtitle1 order-2 order-md-1'}>
-                        gbujag@gmail.com, 9 Bujorilor St. 700548 Iași, Romania
+                        gbujag@gmail.com, 29012 Málaga, Spain
                     </Col>
                     <Col md={6}
                          className={'contact-subtitle2 order-1 order-md-2 d-md-block d-flex justify-content-end'}>

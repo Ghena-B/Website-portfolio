@@ -27,7 +27,7 @@ export const Projects = () => {
             {projectsData.map((project, index) => {
                 const layoutType = getLayoutType(project.id);
 
-                if (layoutType === 'half' && index % 2 === 0) {
+                if (layoutType === 'half' && startsHalfRow(index)) {
                     return (
                         <div className="row row-line" key={project.id}>
                             <HalfLayout
@@ -61,12 +61,22 @@ function getLayoutType(id: number): 'full' | 'half' | 'banner' {
     switch (id) {
         case 1:
         case 5:
+        case 6:
             return 'banner';
         case 2:
             return 'full';
         default:
             return 'half';
     }
+}
+
+// Half-layout projects are paired into rows, so a row starts on every other consecutive half project
+function startsHalfRow(index: number): boolean {
+    let halvesBefore = 0;
+    for (let i = index - 1; i >= 0 && getLayoutType(projectsData[i].id) === 'half'; i--) {
+        halvesBefore++;
+    }
+    return halvesBefore % 2 === 0;
 }
 
 
